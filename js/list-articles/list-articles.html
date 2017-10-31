@@ -1,0 +1,9 @@
+<div class="component">
+    <h1>Liste de tous les articles</h1>
+    <div ng-repeat="article in listArticles">
+        <h4>{{article.title}}</h4>
+        <img ng-src="article.image"/>
+        <p>{{article.text}}</p>
+        <p>{{article.date}}</p>
+    </div>
+</div>

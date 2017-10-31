@@ -1,0 +1,40 @@
+
+.loadFile{
+    height: 3em;
+    width: 5em;
+    background-color: #4a89dc;
+    color: #eeeeee;
+    style : none;
+    border-radius: 15px;
+}
+
+.cadreImage .imageToSend{
+    min-height: 0em;
+    max-height: 20em;
+    min-width: 0em;
+    max-width:30em;
+}
+
+.group{
+    margin-top: 2em;
+    margin-bottom:2em;
+}
+label{
+    display: block;
+    color: #357bd8;
+    font-size: medium;
+    position: relative;
+    top:20px;
+}
+
+label{
+    display: block;
+    color: #357bd8;
+    font-size: medium;
+    position: relative;
+    top:20px;
+}
+
+.article:focus ~label{
+    color: #8e44ad;
+}

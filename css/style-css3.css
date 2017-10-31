@@ -1,0 +1,27 @@
+/*
+    Creation of a responsive grid-view
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+/*
+    Menu height and width
+ */
+
+.menu{
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid ;
+    border-radius: 3px ;
+    background-color: #357bd8;
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.menu li{
+    color: #eeeeee;
+}

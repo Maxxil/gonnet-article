@@ -1,0 +1,28 @@
+<!-- https://github.com/danialfarid/ng-file-upload -->
+
+<div class="article">
+    <input type="button" ngf-select ng-model="image" name="file"
+           ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB"
+           value="Parcourir" class="loadFile"
+    />
+    <div class="group">
+        <div class="cadreImage" id="cadreImage">
+            <img ngf-src="image" class="imageToSend" />
+        </div>
+        <label for="cadreImage">Image</label>
+    </div>
+    <div class="group">
+        <label for="title">Titre</label>
+        <input type="text" class="title" id="title"/>
+
+    </div>
+    <div class="group">
+        <label for="article">Article</label>
+        <textarea ng-model="article" id="article"></textarea>
+
+    </div>
+
+    <div class="styled-input">
+        <input type="button" class="buttonBlue" value="Envoyer" ng-click="sendArticle()">
+    </div>
+</div>
