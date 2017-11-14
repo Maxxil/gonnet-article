@@ -1,27 +1,352 @@
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+
+body {
+    background: #448ed3 ;
+    font-family: "Lato" ;
+}
+.wrap {
+    width:25em;
+    height: auto;
+    margin: auto;
+    margin-top: 10%;
+}
+.avatar {
+    width: 100%;
+    margin: auto;
+    width: 65px;
+    border-radius: 100px;
+    height: 65px;
+    background: #448ed3 ;
+    position: relative;
+    bottom: -15px;
+}
+.avatar img {
+    width: 55px;
+    height: 55px;
+    border-radius: 100px;
+    margin: auto;
+    border:3px solid #fff;
+    display: block;
+}
+.wrap input {
+    border: none;
+    background: #fff;
+    font-family:Lato ;
+    font-weight:700 ;
+    display: block;
+    height: 40px;
+    outline: none;
+    width: calc(100% - 24px) ;
+    margin: auto;
+    padding: 6px 12px 6px 12px;
+}
+.bar {
+    width: 100%;
+    height: 1px;
+    background: #fff ;
+}
+.bar i {
+    width: 95%;
+    margin: auto;
+    height: 1px ;
+    display: block;
+    background: #d1d1d1;
+}
+.wrap input[type="text"] {
+    border-radius: 7px 7px 0px 0px ;
+}
+.wrap input[type="password"] {
+    border-radius: 0px 0px 7px 7px ;
+}
+.forgot_link {
+    color: #83afdf ;
+    color: #83afdf;
+    text-decoration: none;
+    font-size: 11px;
+    position: relative;
+    left: 193px;
+    top: -36px;
+}
+.wrap button {
+    width: 100%;
+    border-radius: 7px;
+    background: #b6ee65;
+    text-decoration: center;
+    border: none;
+    color: #51771a;
+    margin-top:-5px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    outline: none;
+    font-size: 13px;
+    border-bottom: 3px solid #307d63;
+    cursor: pointer;
+}
+
 /*
-    Creation of a responsive grid-view
+    Navigation
  */
 
-* {
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    line-height: 1;
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+#cssmenu:after,
+#cssmenu > ul:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+#cssmenu {
+    width: auto;
+    border-bottom: 3px solid #448ed3;
+    font-family: Raleway, sans-serif;
+    line-height: 1;
+}
+#cssmenu ul {
+    background: #ffffff;
+}
+#cssmenu > ul > li {
+    float: left;
+}
+#cssmenu.align-center > ul {
+    font-size: 0;
+    text-align: center;
+}
+#cssmenu.align-center > ul > li {
+    display: inline-block;
+    float: none;
+}
+#cssmenu.align-right > ul > li {
+    float: right;
+}
+#cssmenu.align-right > ul > li > a {
+    margin-right: 0;
+    margin-left: -4px;
+}
+#cssmenu > ul > li > a {
+    z-index: 2;
+    padding: 18px 25px 12px 25px;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #444444;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    margin-right: -4px;
+}
+#cssmenu > ul > li.active > a,
+#cssmenu > ul > li:hover > a,
+#cssmenu > ul > li > a:hover {
+    color: #ffffff;
+}
+#cssmenu > ul > li > a:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 120%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    content: "";
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: perspective(5px) rotateX(2deg);
+    -webkit-transform-origin: bottom;
+    -moz-transform: perspective(5px) rotateX(2deg);
+    -moz-transform-origin: bottom;
+    transform: perspective(5px) rotateX(2deg);
+    transform-origin: bottom;
+}
+#cssmenu > ul > li.active > a:after,
+#cssmenu > ul > li:hover > a:after,
+#cssmenu > ul > li > a:hover:after {
+    background: #448ed3;
+}
+
 
 /*
-    Menu height and width
+    Form css
  */
 
-.menu{
-    margin-left: 10px;
-    margin-right: 10px;
-    border: 1px solid ;
-    border-radius: 3px ;
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+$red: #e74c3c;
+
+*,
+*:before,
+*:after {
+@include box-sizing(border-box);
+}
+
+html, body {
+    background: #f1f1f1;
+    font-family: 'Merriweather', sans-serif;
+    padding: 1em;
+}
+
+h1 {
+    text-align: center;
+    color: #a8a8a8;
+@include text-shadow(1px 1px 0 rgba(white, 1));
+}
+
+form {
+    max-width: 600px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+input, textarea {
+    border:0; outline:0;
+    padding: 1em;
+@include border-radius(8px);
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    font-family: 'Merriweather', sans-serif;
+@include box-shadow(0 1px 1px rgba(black, 0.1));
+    resize: none;
+
+&:focus {
+ @include box-shadow(0 0px 2px rgba($red, 1)!important);
+ }
+}
+
+#input-submit {
+     color: white;
+     background: $red;
+     cursor: pointer;
+    background-color:#448ed3;
+
+&:hover {
+ @include box-shadow(0 1px 1px 1px rgba(#aaa, 0.6));
+ }
+}
+
+
+textarea {
+    height: 126px;
+}
+}
+
+
+.half {
+    float: left;
+    width: 48%;
+    margin-bottom: 1em;
+}
+
+.right { width: 50%; }
+
+.left {
+    margin-right: 2%;
+}
+
+
+@media (max-width: 480px) {
+    .half {
+        width: 100%;
+        float: none;
+        margin-bottom: 0;
+    }
+}
+
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.file .imageToSend .upload{
+    width: 3em;
+    height: 12em;
+}
+.file{
     background-color: #357bd8;
+    width: 25em;
+    height: 12em;
+    margin: auto;
 }
 
-.menu ul{
-    list-style-type: none;
+.imageToSend{
+    width: 25em;
+    height: 12em;
 }
 
-.menu li{
-    color: #eeeeee;
+.upload{
+    display: none;
+}
+
+/* Cards */
+article{
+    text-align: justify;
+}
+.articleSection{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 1px solid grey;
+}
+
+.articleTitle{
+    text-align: center;
+    color: #357bd8;
+}
+
+.articleImage{
+    width: 12em;
+    float: left;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.articleText{
+    margin-left: 12em;
+}
+
+.container{
+    background-color: white;
+    height:12em;
+}
+
+.sectionFooter{
+    margin-top: 3em;
+}
+
+.articleText{
+    margin-left: 2em;
+    margin-right: 2em;
 }

@@ -3,19 +3,20 @@
  */
 app.component('articleComponent', {
     templateUrl : 'js/article/article.html',
-    controller : ['$scope' , 'articleService', '$window'
-    ,function ($scope , articleService) {
+    controller : ['$scope' , 'articleService', '$window', 'Upload'
+    ,function ($scope , articleService, Upload) {
         $scope.text= '';
         $scope.title = '';
         $scope.image = '';
+        $scope.clickOnUpload = false;
 
         $scope.loadImage = function (event) {
             console.log("Image: " + event);
         };
 
         $scope.sendArticle = function () {
-            console.log($scope.image);
-           /* var promise =
+            console.log($scope.text);
+            var promise =
                 articleService.sendArticle(
                     $scope.title,
                     $scope.text,
@@ -23,11 +24,12 @@ app.component('articleComponent', {
                 );
             promise.then(
                 function (success) {
-                    console.log("OK");
+                    console.log("OK send article");
                 },function (error) {
-                    console.log("KO");
+                    console.log("KO send article");
+                    console.log(error);
                 }
-            )*/
+            )
         }
     }]
 });

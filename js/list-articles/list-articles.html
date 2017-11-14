@@ -1,9 +1,18 @@
-<div class="component">
+<div class="cf">
     <h1>Liste de tous les articles</h1>
+    <article >
     <div ng-repeat="article in listArticles">
-        <h4>{{article.title}}</h4>
-        <img ng-src="article.image"/>
-        <p>{{article.text}}</p>
-        <p>{{article.date}}</p>
+        <section class="articleSection">
+            <section class="cf">
+                <h2 class="articleTitle">{{article.title}}</h2>
+                <aside>
+                    <img class="articleImage" ng-src="{{urlApi}}/data/images/{{article.image}}"/>
+                </aside>
+                <p class="articleText">{{article.text}}</p>
+
+            </section>
+            <section class="sectionFooter">{{article.date}}</section>
+        </section>
     </div>
+    </article>
 </div>

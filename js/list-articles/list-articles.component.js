@@ -6,14 +6,16 @@ app.component('listArticlesComponent' , {
     controller : ['$scope' , 'articleService',
     function ($scope , articleService) {
         $scope.listArticles = [];
-
+        $scope.urlApi = apiUrl;
         $scope.getArticles = function () {
             var promise = articleService.getArticles();
             promise.then(
                 function (success) {
+                    $scope.listArticles = success.data;
                     console.log("OK")
                 },function (error) {
-                    console.log("KO")
+                    console.log('KO get article');
+                    console.log(error);
                 }
             )
         };

@@ -3,7 +3,7 @@
  */
 app.service('listArticleService' , function ($http) {
     this.getArticles = function () {
-        var promise = $http.get(listArticlesUrl );
+        var promise = $http.get(listArticlesUrl);
         return promise;
     }
 

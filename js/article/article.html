@@ -1,28 +1,19 @@
 <!-- https://github.com/danialfarid/ng-file-upload -->
+<h1>Elegant Contact Form</h1>
+<form class="cf">
+    <div class="half left cf">
+        <label>Image</label>
+        <div class="file" onclick="uploadFile('upload')">
 
-<div class="article">
-    <input type="button" ngf-select ng-model="image" name="file"
-           ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB"
-           value="Parcourir" class="loadFile"
-    />
-    <div class="group">
-        <div class="cadreImage" id="cadreImage">
-            <img ngf-src="image" class="imageToSend" />
+            <input type="file" ngf-select ng-model="image" name="upload"
+                   ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB"
+                   value="Parcourir" class="upload" >
+
+            <img ngf-src="image" class="imageToSend"/>
         </div>
-        <label for="cadreImage">Image</label>
+        
+        <input type="text" id="input-name" placeholder="Titre" ng-model="title">
+        <textarea placeholder="Article" ng-model="text"></textarea>
     </div>
-    <div class="group">
-        <label for="title">Titre</label>
-        <input type="text" class="title" id="title"/>
-
-    </div>
-    <div class="group">
-        <label for="article">Article</label>
-        <textarea ng-model="article" id="article"></textarea>
-
-    </div>
-
-    <div class="styled-input">
-        <input type="button" class="buttonBlue" value="Envoyer" ng-click="sendArticle()">
-    </div>
-</div>
+    <input type="submit" value="Submit" id="input-submit" ng-click="sendArticle()"/>
+</form>
