@@ -5,7 +5,7 @@ app.component('loginComponent' , {
     templateUrl : "js/login/login.html",
     controller : ['$scope' , 'loginService', '$location'
         , function ($scope , loginService, $location) {
-        $scope.login = '';
+        $scope.username = '';
         $scope.password = '';
         $scope.connect = function () {
             if($scope.login != '' && $scope.password != '')

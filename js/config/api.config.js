@@ -5,4 +5,4 @@ var apiUrl = "http://localhost:4444";
 var loginUrl= apiUrl + '/login';
 var listArticlesUrl = apiUrl + '/article';
 var articleUrl = apiUrl + '/article';
-var signinUrl = apiUrl + '/signin'
+var signinUrl = apiUrl + '/signin';
